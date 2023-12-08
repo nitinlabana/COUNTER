@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="counter">
+                <h1 id="p1">COUNTER</h1>
+                <h1 id="count">0</h1>
+                <div id="buttons">
+                    <button class="btn btn-outline-dark p2" id="reset">Reset</button>
+                    <button class="btn btn-outline-dark p2" id="increase">Increase</button>
+                    <button class="btn btn-outline-dark p2" id="decrease">Decrease</button>
+                    <button class="btn btn-outline-dark p2" id="increaseBy2">2+</button>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+            var count = 0;
+        
+        document.querySelector("#reset").addEventListener("click", () => {
+            resetCount();
+            
+        });
+        
+        document.querySelector("#increase").addEventListener("click", () => {
+            changeCount(1);
+        });
+        document.querySelector("#decrease").addEventListener("click", () => {
+            changeCount(-1);
+        });
+        document.querySelector("#increaseBy2").addEventListener("click", () => {
+            changeCount(2);
+        });
+
+        changeCount = (number) => {
+            // count = 0;
+            count += number;
+            document.querySelector("#count").textContent = count;
+        }
+        function resetCount() {
+            count = 0;
+            document.querySelector("#count").textContent = count;
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
